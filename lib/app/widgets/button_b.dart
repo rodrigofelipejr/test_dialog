@@ -15,7 +15,7 @@ class ButtonB extends StatelessWidget {
             builder: (BuildContext context) {
               return WillPopScope(
                 onWillPop: () async {
-                  print("--- Button A => WillPopScope!!!");
+                  print("--- Button B => WillPopScope!!!");
                   return false;
                 },
                 child: CustomAlertDialog(),
