@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:test_dialog/app/widgets/alert_dialog/custom_alert_dialog.dart';
 import 'package:asuka/asuka.dart' as asuka;
-import 'package:test_dialog/app/widgets/custom_alert_dialog.dart';
 
-class ButtonC extends StatelessWidget {
+class ButtonDialogAsuka extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: RaisedButton(
-        child: Text("Dialog C"),
+        child: Text("Dialog Asuka"),
         onPressed: () {
-          asuka.showDialog(builder: (context) => CustomAlertDialog());
+          asuka.showDialog(builder: (BuildContext context) => CustomAlertDialog());
         },
       ),
     );

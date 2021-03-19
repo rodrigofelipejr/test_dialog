@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_dialog/app/home_page.dart';
 
 import 'package:asuka/asuka.dart' as asuka;
+import 'package:test_dialog/app/page_A.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: PageA(),
     );
   }
 }

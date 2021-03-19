@@ -11,11 +11,10 @@ class CustomAlertDialog extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        // usually buttons at the bottom of the dialog
         new FlatButton(
           child: new Text("Close"),
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).pop(false);
           },
         ),
       ],

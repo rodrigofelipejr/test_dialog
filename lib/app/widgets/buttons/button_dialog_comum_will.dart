@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:test_dialog/app/widgets/custom_alert_dialog.dart';
+import 'package:test_dialog/app/widgets/alert_dialog/custom_alert_dialog.dart';
 
-class ButtonB extends StatelessWidget {
+class ButtonDialogComumWill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: RaisedButton(
-        child: Text("Dialog B"),
+        child: Text("Dialog comum + WillPopScope"),
         onPressed: () {
           showDialog(
             barrierDismissible: false,
@@ -15,7 +15,7 @@ class ButtonB extends StatelessWidget {
             builder: (BuildContext context) {
               return WillPopScope(
                 onWillPop: () async {
-                  print("--- Button B => WillPopScope!!!");
+                  print("--- ButtonDialogComumWill => WillPopScope");
                   return false;
                 },
                 child: CustomAlertDialog(),

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:test_dialog/app/config_page.dart';
+import 'package:test_dialog/app/page_b.dart';
 
-class HomePage extends StatelessWidget {
+class PageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        print("--- HomePage => WillPopScope");
+        print("--- PageA => WillPopScope");
         return true;
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Home Page"),
+          title: Text("Page A"),
         ),
         body: Center(
           child: RaisedButton(
-            child: Text("Config page"),
+            child: Text("Page B"),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ConfigPage()),
+                MaterialPageRoute(builder: (context) => PageB()),
               );
             },
           ),
