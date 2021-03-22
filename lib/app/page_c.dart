@@ -10,6 +10,10 @@ class PageC extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async {
         print("--- Page C => WillPopScope");
+
+        final bool result = ModalRoute.of(context)!.isCurrent;
+        print("check: $result");
+
         Navigator.of(context).pop();
         return false;
       },
