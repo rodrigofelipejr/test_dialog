@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:test_dialog/home_page.dart';
+import 'package:test_dialog/navigation_service.dart';
 
-import 'package:asuka/asuka.dart' show builder;
-import 'package:test_dialog/app/home_page.dart';
-
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      builder: builder,
+      navigatorKey: NavigationService().navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
