@@ -10,7 +10,7 @@ class ButtonDialogAsuka extends StatelessWidget {
       child: RaisedButton(
         child: Text("Dialog Asuka"),
         onPressed: () {
-          asuka.showDialog(builder: (BuildContext context) => CustomAlertDialog());
+          asuka.showDialog(builder: (BuildContext context) => CustomAlertDialog(), useRootNavigator: true);
         },
       ),
     );
