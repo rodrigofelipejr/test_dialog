@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:test_dialog/app/page_b.dart';
+import 'package:test_dialog/app/widgets/buttons/button_dialog_asuka.dart';
 
 class PageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        print("--- PageA => WillPopScope");
+        print("--- Page A => WillPopScope");
         return true;
       },
       child: Scaffold(
@@ -14,14 +14,11 @@ class PageA extends StatelessWidget {
           title: Text("Page A"),
         ),
         body: Center(
-          child: RaisedButton(
-            child: Text("Page B"),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => PageB()),
-              );
-            },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ButtonDialogAsuka(),
+            ],
           ),
         ),
       ),

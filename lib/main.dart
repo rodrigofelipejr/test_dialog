@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:asuka/asuka.dart' as asuka;
-import 'package:test_dialog/app/page_A.dart';
+import 'package:test_dialog/app/page_a.dart';
 
 void main() {
   runApp(MyApp());
