@@ -6,15 +6,15 @@ class PageA extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        print("--- PageA => WillPopScope");
-        return true;
+        print("--- Page A => WillPopScope");
+        return false;
       },
       child: Scaffold(
         appBar: AppBar(
           title: Text("Page A"),
         ),
         body: Center(
-          child: RaisedButton(
+          child: ElevatedButton(
             child: Text("Page B"),
             onPressed: () {
               Navigator.push(

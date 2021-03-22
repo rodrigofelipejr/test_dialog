@@ -6,7 +6,7 @@ class ButtonDialogComumWill extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: RaisedButton(
+      child: ElevatedButton(
         child: Text("Dialog comum + WillPopScope"),
         onPressed: () {
           showDialog(

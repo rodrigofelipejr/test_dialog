@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_dialog/app/widgets/buttons/button_dialog_asuka.dart';
-import 'package:test_dialog/app/widgets/buttons/button_dialog_asuka_will.dart';
-import 'package:test_dialog/app/widgets/buttons/button_dialog_comum.dart';
-import 'package:test_dialog/app/widgets/buttons/button_dialog_comum_will.dart';
+import 'package:test_dialog/app/page_c.dart';
 
 class PageB extends StatelessWidget {
   @override
@@ -17,14 +14,14 @@ class PageB extends StatelessWidget {
           title: Text("Page B"),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ButtonDialogComum(),
-              ButtonDialogComumWill(),
-              ButtonDialogAsuka(),
-              ButtonDialogAsukaWill(),
-            ],
+          child: ElevatedButton(
+            child: Text("Page C"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PageC()),
+              );
+            },
           ),
         ),
       ),
