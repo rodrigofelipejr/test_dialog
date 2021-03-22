@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:asuka/asuka.dart' as asuka;
-import 'package:test_dialog/app/page_a.dart';
+import 'package:asuka/asuka.dart' show builder;
+import 'package:test_dialog/app/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      builder: asuka.builder,
+      builder: builder,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: PageA(),
+      home: HomePage(),
     );
   }
 }
